@@ -318,7 +318,7 @@ class PlexServerManager(signalsmixin.SignalsMixin):
                 conn = serverObj['connections'][i]
                 if conn['address'][:5] == "https":
                     hasSecureConn = True
-                    break
+                    # break  # keep loading other insecure addr
 
             for i in range(len(serverObj.get('connections', []))):
                 conn = serverObj['connections'][i]
